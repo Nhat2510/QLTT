@@ -22,11 +22,13 @@ class userClass {
 
     async updateInfoUser(req, res) {
         try {
-            const { email, sex, birthday, name, role } = req.body;
+            const { email } = req.params;
+            const { sex, birthday, name, role } = req.body;
             const hasExisted = await User.findOne({ email });
             if (!hasExisted) return res.status(400).json({ message: "Invalid Email" });
-            const response = await User.findOneAndUpdate({ email }, { email, sex, birthday, name, role });
-            res.status(200).json({ newInfo: response._docs });
+            const response = await User.findOneAndUpdate({ email }, { sex, birthday, name, role });
+            const newInfo = await User.find({ email });
+            res.status(200).json({ newInfo });
         } catch (error) {
             res.status(400).json({ error });
         }

@@ -1,0 +1,35 @@
+.wrapper{
+    label{
+        font-size: 20px;
+    }
+    input{
+        font-size: 16px;
+        padding: 5px 7px;
+        // margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    button{
+        font-size: 18px;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    .change-info{
+        display: flex;
+        justify-content: space-around;
+    }
+    select{
+        font-size: 18px;
+        padding: 7px 10px;
+        border-radius: 10px;
+    }
+    .show{
+        display: flex;
+        justify-content:center
+    }
+    .btn-ok{
+        width: 100px;
+        margin: auto;
+        margin-top:20px;
+    }
+}

@@ -1,0 +1,19 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 80%;
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+        td,th{
+            border: 1px solid #999;
+        }
+        h1{
+            text-align: center;
+        }
+    }
+    
+}
